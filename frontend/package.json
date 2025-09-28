@@ -1,19 +1,24 @@
 {
-  "name": "simple-tiktok",
-  "version": "1.0.0",
-  "private": true,
-  "dependencies": {
-    "@chakra-ui/react": "^2.8.0",
-    "@emotion/react": "^11.11.0",
-    "@emotion/styled": "^11.11.0",
-    "framer-motion": "^10.12.16",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-scripts": "5.0.1",
-    "typescript": "^5.1.6"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build"
-  }
+    "name": "simple-tiktok",
+    "version": "1.0.0",
+    "private": true,
+    "dependencies": {
+        "@chakra-ui/react": "^2.8.0",
+        "@emotion/react": "^11.11.0",
+        "@emotion/styled": "^11.11.0",
+        "framer-motion": "^10.12.16",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0",
+        "react-icons": "^4.11.0",
+        "react-scripts": "5.0.1",
+        "typescript": "^4.9.5"
+    },
+    "devDependencies": {
+        "@types/react": "^18.2.14",
+        "@types/react-dom": "^18.2.7"
+    },
+    "scripts": {
+        "start": "react-scripts start",
+        "build": "react-scripts build"
+    }
 }

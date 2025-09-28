@@ -6,7 +6,7 @@ services:
       dockerfile: Dockerfile.backend
     container_name: tiktok-backend
     volumes:
-      - ./videos:/videos
+      - "C:/Users/Husain/code/discord-media-downloader/downloads/Desi sisters/explicit-media:/videos"
     ports:
       - "8000:8000"
     restart: unless-stopped
