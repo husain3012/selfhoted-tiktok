@@ -1,0 +1,23 @@
+version: "3.8"
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile.backend
+    container_name: tiktok-backend
+    volumes:
+      - ./videos:/videos
+    ports:
+      - "8000:8000"
+    restart: unless-stopped
+
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile.frontend
+    container_name: tiktok-frontend
+    ports:
+      - "3015:80"
+    depends_on:
+      - backend
+    restart: unless-stopped
