@@ -1,4 +1,5 @@
 version: "3.8"
+
 services:
   backend:
     build:
@@ -6,15 +7,19 @@ services:
       dockerfile: Dockerfile.backend
     container_name: tiktok-backend
     volumes:
-      - "C:/Users/Husain/code/discord-media-downloader/downloads/Desi sisters/explicit-media:/videos"
+      - ./videos:/videos
     ports:
       - "8000:8000"
+    environment:
+      - HOST_IP=0.0.0.0  # FastAPI host
     restart: unless-stopped
 
   frontend:
     build:
       context: .
       dockerfile: Dockerfile.frontend
+      args:
+        REACT_APP_SERVER_HOST: http://192.168.0.194:8000
     container_name: tiktok-frontend
     ports:
       - "3015:80"
